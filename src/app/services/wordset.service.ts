@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { Wordset } from '../shared/wordset';
 import {HttpClient} from '@angular/common/http';
 import {BaseURL} from '../baseurls/baseurls';
