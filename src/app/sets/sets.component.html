@@ -1,0 +1,14 @@
+<div fxFlex class="container">
+	<mat-list fxLayout="row">
+		<mat-list-item  *ngFor="let wordSet of allSets">
+			<mat-card fxFlex fxLayoutGap="10px">
+				<mat-card-title >{{wordSet.topic | uppercase}}</mat-card-title>	
+				<mat-card-actions>
+					<button mat-button routerLink="/train">train</button>
+					<button mat-button routerLink='/sets'>like</button>
+					<button mat-button>dislike</button>
+				</mat-card-actions>
+			</mat-card>
+		</mat-list-item>
+	</mat-list>
+</div>
