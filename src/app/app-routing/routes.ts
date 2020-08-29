@@ -7,7 +7,7 @@ import { RandomComponent } from '../random/random.component';
 
 export const ROUTES: Routes = [
 	{path: 'home', component: HomeComponent},
-	{path: 'train', component: TrainComponent},
+	{path: 'train/:id', component: TrainComponent},
 	{path: 'random', component: RandomComponent},
 	{path: 'sets', component: SetsComponent},
 	{path: '', redirectTo: '/home', pathMatch: 'full'}

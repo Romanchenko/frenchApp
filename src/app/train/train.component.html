@@ -1,3 +1,22 @@
-<p>
-  train works!
-</p>
+<div fxFlex class="container" fxLayout='column' fxLayoutGap='50px'>
+	<form class="container"  fxFlex='80' fxLayout='column' *ngIf="quizForm && !result" novalidate [formGroup]="quizForm" #fform="ngForm" (ngSubmit)="onSubmit()" >
+		<h2 mat-line>Type in translations</h2>
+		<mat-list >
+			<mat-list-item *ngFor="let question of set.wordlist">
+				<mat-form-field class="full-width">
+            		<input matInput formControlName="{{question.id}}" placeholder="{{question.word}}" type="text" required>
+        		</mat-form-field>
+        	</mat-list-item>
+		</mat-list>
+		<button type="submit" mat-button color="primary" class="full-width" [disabled]="quizForm.invalid">Submit</button>
+	</form>
+
+	<div *ngIf='result' fxFlex='80' fxLayout='column'>
+		<h2 mat-line>Your result is {{result}}</h2>
+		<div *ngIf="mistakes.length>0">
+			<h4 mat-line >Mistakes</h4>	
+		</div>
+		<h4 mat-line *ngIf="mistakes.length===0">Well done!</h4>
+	</div>
+
+</div>

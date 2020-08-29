@@ -4,7 +4,7 @@
 			<mat-card fxFlex fxLayoutGap="10px">
 				<mat-card-title >{{wordSet.topic | uppercase}}</mat-card-title>	
 				<mat-card-actions>
-					<button mat-button [routerLink]="['/train']" [queryParams]="{'id': wordSet.id}">train</button>
+					<button mat-button [routerLink]="['/train', wordSet.id]">train</button>
 					<button mat-button routerLink='/sets'>like</button>
 					<button mat-button>dislike</button>
 				</mat-card-actions>

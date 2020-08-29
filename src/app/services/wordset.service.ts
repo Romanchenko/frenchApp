@@ -25,7 +25,9 @@ export class WordsetService {
   }
 
   getWordsetById(id: string): Observable<Wordset> {
-  	return this.getAllWordsets().pipe(map(items => items[id]));
+  	return this.getAllWordsets().pipe(map(items => {
+      return items[+id];
+    }));
   }
 
 }
