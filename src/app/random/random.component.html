@@ -1,3 +1,11 @@
-<p>
-  random works!
-</p>
+<div fxFlex fxLayout="column" fxLayoutAlign="center center" >
+<div fxFlex>
+<button mat-button (click)="getRandomSet()">RANDOM!</button>
+</div>
+<div fxFlex *ngIf="currentSet" >
+	<p mat-line>Blessed Random gives you topic: {{currentSet.topic}}</p>
+</div>
+<div fxFlex *ngIf="currentSet">
+	<button mat-button [routerLink]="['/train', currentSet.id]">Train It!</button>
+</div>
+</div>

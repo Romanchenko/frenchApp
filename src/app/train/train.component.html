@@ -1,6 +1,6 @@
 <div fxFlex class="container" fxLayout='column' fxLayoutGap='50px'>
 	<form class="container"  fxFlex='80' fxLayout='column' *ngIf="quizForm && !result" novalidate [formGroup]="quizForm" #fform="ngForm" (ngSubmit)="onSubmit()" >
-		<h2 mat-line>Type in translations</h2>
+		<h2 mat-line>Type in the translations</h2>
 		<mat-list >
 			<mat-list-item *ngFor="let question of set.wordlist">
 				<mat-form-field class="full-width">
